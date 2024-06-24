@@ -41,12 +41,12 @@ public class RuleMatch {
                 warnRequest.setWarnLevel("匹配失败");
                 return warnRequest;
             }else {
-                System.out.println("表达式：" + tExpression);
+
                 ScriptEngineManager objManager = new ScriptEngineManager();
                 ScriptEngine objEngine = objManager.getEngineByName("js");
                 boolean bFlag = (boolean) objEngine.eval(tExpression);
                 if (bFlag) {
-                    System.out.println("规则匹配成功");
+
                     WarnRequest warnRequest = new WarnRequest();
                     warnRequest.setWarnName(rule.getName());
                     warnRequest.setWarnLevel(detail.getLevel());

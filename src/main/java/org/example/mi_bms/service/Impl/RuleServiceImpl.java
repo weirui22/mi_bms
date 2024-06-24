@@ -11,6 +11,7 @@ import org.example.mi_bms.service.RuleService;
 import org.example.mi_bms.util.RuleMatch;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -20,6 +21,7 @@ import java.util.List;
 
 import static com.fasterxml.jackson.databind.type.LogicalType.Map;
 
+@Component
 @Slf4j
 @Service("RuleService")
 public class RuleServiceImpl implements RuleService {
