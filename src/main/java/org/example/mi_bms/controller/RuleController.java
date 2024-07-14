@@ -22,7 +22,7 @@ public class RuleController {
         try {
             result = ruleService.handleRules(wanrnMessage);
         } catch (Exception e) {
-            throw e;
+            return R.error(e.getMessage());
         }
         return R.success(result);
 
