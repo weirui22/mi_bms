@@ -32,7 +32,6 @@ public class RuleMatch {
                 left = left.replace("\"", "");
                 right = right.replace("\"", "");
                 tExpression = tExpression.replace(left, right);
-//                expression = expression.replace("Ix", "0");
             }//字符串没有变化
             if(tExpression.equals(expression))
             {
@@ -54,8 +53,6 @@ public class RuleMatch {
 
                 }
             }
-
-
             }
 
         WarnRequest warnRequest = new WarnRequest();
