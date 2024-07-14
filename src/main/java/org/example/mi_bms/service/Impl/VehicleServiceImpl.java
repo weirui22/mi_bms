@@ -19,9 +19,11 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Override
     public String updateVehicle(Integer carid, Integer batteryType, Double totalDistance, Integer batteryHealth) {
+
         Vehicle vehicle = new Vehicle();
         vehicle.setVid(uuid.generateUUID());
-        vehicle.setCarid(carid);
+        // carId 设置自增，利于之后的查询
+//        vehicle.setCarid(carid);
         vehicle.setBatteryType(batteryType);
         vehicle.setTotalDistance(totalDistance);
         vehicle.setBatteryHealth(batteryHealth);
